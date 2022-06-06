@@ -134,7 +134,7 @@ def main():
     )
     example_frame.place(relx=0.5, rely=0.03, relwidth=0.45, relheight=0.7)
     example_frame.update()
-    pil_image = Image.open(forzen_dir.app_path() + "/Schematic.png")
+    pil_image = Image.open(forzen_dir.app_path() + "/Schematic.png") # windows: pil_image = Image.open(forzen_dir.app_path() + "\Schematic.png")
     image_zoom = pil_image.resize((round(0.98 * example_frame.winfo_width()), round(0.936 * example_frame.winfo_height())), Image.ANTIALIAS)
     schematic_diagram = ImageTk.PhotoImage(image_zoom)
     schematic_label = ttk.Label(example_frame, image=schematic_diagram, padding=0)
